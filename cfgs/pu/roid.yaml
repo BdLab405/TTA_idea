@@ -1,0 +1,23 @@
+MODEL:
+  ADAPTATION: roid
+  ARCH: resnet1d_8
+  CKPT_PATH: ./
+#  ./source_resnet18_N15_M01_F10.pth
+TEST:
+  BATCH_SIZE: 48
+CORRUPTION:
+  DATASET: PU_13c_1d
+  SEVERITY:
+    - 1
+  TYPE:
+#    - N09_M07_F10
+#    - N15_M01_F10
+#    - N15_M07_F04
+#    - N15_M07_F10
+OPTIM:
+  METHOD: Adam
+  STEPS: 1
+  BETA: 0.9
+  LR: 1e-3
+  WD: 0.
+SETTING: reset_each_shift

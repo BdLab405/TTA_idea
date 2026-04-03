@@ -1,0 +1,20 @@
+CORRUPTION:
+  DATASET: PU_1d_8c_2048
+
+MODEL:
+  ARCH: resnet18
+  NUM_CLASSES: 8
+  CKPT_PATH: ""  # 无需加载已有模型
+
+SOURCE:
+  BATCH_SIZE: 64
+  NUM_WORKERS: 4
+  NUM_SAMPLES: -1  # 使用全部样本
+  PERCENTAGE: 1.0  # 使用所有样本
+
+OPTIM:
+  LR: 0.01
+  EPOCHS: 10
+
+DATA_DIR: ./data
+CKPT_DIR: ./ckpt
